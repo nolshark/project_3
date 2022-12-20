@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended:true }));
 app.use(express.json());
 app.use(routes);
 
+// open server
 db.once('open', () => {
     app.listen(PORT, () => {
         console.log(`listening at http://localhost:${PORT}$`);
