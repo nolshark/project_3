@@ -12,10 +12,10 @@ export const QUERY_CHARACTERS = gql`
         characters{
             _id
             name
-            specialty
-            ip
+            type
+            brand
             bio
-            source
+            record
         }
     }
 `
