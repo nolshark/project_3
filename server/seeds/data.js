@@ -9,7 +9,7 @@ const testUser = [
     'TheCoolestAccount',
     'RandomUserNameEpic',
     'WEOUTHERE',
-    'KanyeSouth'
+    'KanyeSouth',
 ];
 
 const lorum = [
@@ -52,6 +52,27 @@ const heroes = [
     'villain man',
 ]
 
+const types = [
+    'assassin',
+    'fighter',
+    'martial artist',
+    'elemental',
+    'supernatural',
+    'summoner',
+    'shapeshifter',
+]
+
+const brands = [
+    'rackstar',
+    'bud strong',
+    'bungo',
+    'microhard',
+    'nintendork',
+    'laambourgenie',
+    'notquik',
+]
+
+
 const genRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
 
 const getRandomUser = () => `${testUser[genRandomIndex(testUser)]}`;
@@ -68,9 +89,15 @@ const getRandomPost = (words) => {
 
 const getRandomCharacter = () => `${heroes[genRandomIndex(heroes)]}`;
 
+const getRandomType = () => `${types[genRandomIndex(types)]}`;
+
+const getRandomBrand = () => `${brands[genRandomIndex(brands)]}`;
+
 module.exports = {
     getRandomUser,
     getRandomPost,
     getRandomCharacter,
+    getRandomType,
+    getRandomBrand,
     genRandomIndex
 }
