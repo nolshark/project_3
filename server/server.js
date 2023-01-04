@@ -1,6 +1,6 @@
 // imports
 const express = require('express');
-const db = require('./config/connection.js');
+const connection = require('./config/connection.js');
 const routes = require('./routes');
 
 // setup express middleware
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(routes);
 
 // open server
-db.once('open', () => {
+connection.once('open', () => {
     app.listen(PORT, () => {
         console.log(`listening at http://localhost:${PORT}$`);
     });
