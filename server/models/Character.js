@@ -17,6 +17,11 @@ const characterSchema = new Schema(
             required: false,
             maxlength: 35
         },
+        description: {
+            type: String,
+            required: false,
+            maxlength: 120
+        },
         wins: {
             type: Number,
             required: true,

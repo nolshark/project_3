@@ -26,6 +26,7 @@ connection.once('open', async () => {
         let name = getRandomCharacter();
         let type = getRandomType();
         let brand = getRandomBrand();
+        let description = getRandomPost();
         let wins = Math.floor(Math.random() * 1000);
         let losses = Math.floor(Math.random() * 1000);
 
@@ -33,6 +34,7 @@ connection.once('open', async () => {
             name,
             type,
             brand,
+            description,
             wins,
             losses
         });
