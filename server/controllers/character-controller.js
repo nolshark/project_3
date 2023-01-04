@@ -7,7 +7,7 @@ const characterController = {
             .catch((err) => res.status(500).json(err));
     },
     // get specific character
-    getSingleCharacter(req, res) {
+    getCharacter(req, res) {
         Character.findOne({ _id: req.param.characterId })
             .then((char) => {
                 if (!char) {

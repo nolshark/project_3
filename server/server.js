@@ -1,7 +1,7 @@
 // imports
 const express = require('express');
 const db = require('./config/connection.js');
-const routes = require('./controllers');
+const routes = require('./routes');
 
 // setup express middleware
 const PORT = process.env.PORT || 3001;
