@@ -1,38 +1,49 @@
 const connection = require('../config/connection.js');
 const { User, Character } = require('../models');
-const { getRandomUser, getRandomPost, getRandomCharacter, genRandomIndex } = require('./data.js');
+const { getRandomUser, getRandomPost, getRandomCharacter, getRandomType, getRandomBrand, genRandomIndex } = require('./data.js');
 
 console.time('seeding');
 
 connection.once('open', async () => {
     console.log('connected');
-    //await Reaction.deleteMany({});
     await Character.deleteMany({});
     await User.deleteMany({});
 
     const users = [];
     const characters = [];
 
-    const makeCharacter = (text) => {
-        characters.push({
-            text,
-            
-        });
-    }
-
     for (let i = 0; i < 5; i++) {
         let username = getRandomUser();
         let email = `${usersName}@Gmail.com`;
 
         users.push({
-            username: username,
-            email: email
-    });
+            username,
+            email
+        });
+    }
+
+    for (let i = 0; i < 10; i++) {
+        let name = getRandomCharacter();
+        let type = getRandomType();
+        let brand = getRandomBrand();
+        let wins = Math.floor(Math.random() * 1000);
+        let losses = Math.floor(Math.random() * 1000);
+
+        characters.push({
+            name,
+            type,
+            brand,
+            wins,
+            losses
+        });
     }
 
     await User.collection.insertMany(users);
+    await Character.collection.insertMany(characters);
 
     console.table(users);
-    console.timeEnd('seeding');
+    console.log('____________________________')
+    console.table(characters);
+    console.timeEnd('Seeding complete! 🌱');
     process.exit(0);
 });
