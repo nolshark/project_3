@@ -7,7 +7,7 @@ const userController = {
             .catch((err) => res.status(500).json(err));
     },
     // get specific user
-    getSingleUser(req, res) {
+    getUser(req, res) {
         User.findOne({ _id: req.param.userId })
             .then((user) => {
                 if (!user) {
