@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Character = require('./Character.js');
 
 const userSchema = new Schema(
     {
@@ -13,7 +14,9 @@ const userSchema = new Schema(
             required: true,
             unique: true,
             match: [/.+@.+\..+/, 'Must match an email address!']
-        }
+        },
+        upvotes: [Character],
+        downvotes: [Character]
     },
     {
 
