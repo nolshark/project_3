@@ -12,9 +12,9 @@ connection.once('open', async () => {
     const users = [];
     const characters = [];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 1; i++) {
         let username = getRandomUser();
-        let email = `${usersName}@Gmail.com`;
+        let email = `${username}@Gmail.com`;
 
         users.push({
             username,
@@ -22,11 +22,11 @@ connection.once('open', async () => {
         });
     }
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 1; i++) {
         let name = getRandomCharacter();
         let type = getRandomType();
         let brand = getRandomBrand();
-        let description = getRandomPost();
+        let description = getRandomPost(25);
         let wins = Math.floor(Math.random() * 1000);
         let losses = Math.floor(Math.random() * 1000);
 
@@ -44,7 +44,6 @@ connection.once('open', async () => {
     await Character.collection.insertMany(characters);
 
     console.table(users);
-    console.log('____________________________')
     console.table(characters);
     console.timeEnd('Seeding complete! 🌱');
     process.exit(0);
