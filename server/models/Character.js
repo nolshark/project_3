@@ -2,6 +2,10 @@ const { Schema, model } = require('mongoose');
 
 const characterSchema = new Schema(
     {
+        characterId:{
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId()
+        },
         name: {
             type: String,
             required: true,
@@ -36,7 +40,8 @@ const characterSchema = new Schema(
     {
         toJSON: {
             virtuals: true
-        }
+        },
+        _id: false
     }
 );
 
