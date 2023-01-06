@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const Character = require('./Character.js');
 
 const userSchema = new Schema(
     {
@@ -15,15 +14,36 @@ const userSchema = new Schema(
             unique: true,
             match: [/.+@.+\..+/, 'Must match an email address!']
         },
-        upvotes: [Character],
-        downvotes: [Character]
+        upvotes: {
+            type: Array
+        },
+        downvotes: {
+            type: Array
+        }
     },
     {
-
+        toJSON: {
+            virtuals: true
+        }
     }
 );
 
-const User = mongoose.model('User', userSchema);
+userSchema.virtual('upvoteCount').get(function () {
+    upCount = this.upvotes.length;
+    return upCount;
+});
+
+userSchema.virtual('downvoteCount').get(function () {
+    downCount = this.downvotes.length;
+    return downCount;
+});
+
+userSchema.virtual('totalVotes').get(function () {
+    totalCount = this.downvotes.length + this.upvotes.length;
+    return totalCount;
+});
+
+const User = model('User', userSchema);
 
 const handleError = (err) => console.error(err);
 
