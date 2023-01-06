@@ -50,7 +50,7 @@ characterSchema.virtual('votes').get(function () {
     return total;
 });
 
-const Character = mongoose.model('Character', characterSchema);
+const Character = model('Character', characterSchema);
 
 const handleError = (err) => console.error(err);
 
