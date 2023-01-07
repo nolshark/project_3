@@ -7,7 +7,11 @@ const Header  = () => {
 
     return (
         <header class="columns is-centered is-full">
-            <NavBar />
+            <>
+            {
+                location.pathname !== '/login' && location.pathname !== 'signup' && NavBar 
+            }
+            </>
         </header>
     );
 };
