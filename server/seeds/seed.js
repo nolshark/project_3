@@ -22,7 +22,7 @@ connection.once('open', async () => {
         });
     }
 
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 2; i++) {
         let name = getRandomCharacter();
         let type = getRandomType();
         let brand = getRandomBrand();
