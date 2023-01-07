@@ -1,10 +1,20 @@
 import React from "react";
 
-function CharCard = () => {
+const CharCard = () => {
 
     return (
-
+        <div> 
+            <div id="charImage"> 
+            
+            </div>
+            <div id="charDescribe">
+                <div id="charBio">
+                </div>
+                <div id="charAttr">
+                </div>
+            </div>   
+        </div>
     );
 };
 
-export default charCard;
+export default CharCard;

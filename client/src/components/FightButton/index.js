@@ -1,6 +1,5 @@
 import React from "react";
 
-
 //const Button = styled.button`
   //background-color: black;
   //color: white;
@@ -11,9 +10,13 @@ import React from "react";
   //cursor: pointer;
 //`;
 
-//function fight() {
-  //  alert('Fight!');
-  //}
+const FightButton  = () => {
 
-// Usage
-//<Button onClick={fight}></Button>
+  return (
+      <button class="columns is-centered">
+          FIGHT!
+      </button>
+  );
+};
+
+export default FightButton;
