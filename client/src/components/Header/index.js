@@ -1,11 +1,14 @@
 import React from "react";
+import NavBar from "./NavBar";
+import { useLocation } from "react-router-dom";
 
 const Header  = () => {
+    let location = useLocation();
 
     return (
-        <div>
-            <h1>This is the Header</h1>
-        </div>
+        <header class="columns is-centered is-full">
+            <NavBar />
+        </header>
     );
 };
 
