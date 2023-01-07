@@ -20,9 +20,9 @@ import React from "react";
 const SumbitButton  = () => {
 
   return (
-      <div class="columns is-centered">
-          <h1>Brought to You by MatCh MoNo</h1>
-      </div>
+      <button>
+        Sumbit
+      </button>
   );
 };
 

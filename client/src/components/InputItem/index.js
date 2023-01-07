@@ -4,7 +4,9 @@ const InputItem  = ({ email, userName, password }) => {
 
     return (
         <div>
+            <input>
 
+            </input>
         </div>
     );
 };
