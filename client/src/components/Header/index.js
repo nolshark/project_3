@@ -1,11 +1,12 @@
 import React from "react";
+import NavBar from "./NavBar";
 
 const Header  = () => {
 
     return (
-        <div>
-            <h1>This is the Header</h1>
-        </div>
+        <header class="columns is-centered is-full">
+            <NavBar />
+        </header>
     );
 };
 

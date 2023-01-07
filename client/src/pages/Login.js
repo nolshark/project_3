@@ -12,9 +12,9 @@ const Login = () => {
     return (
         
         <main>
-            <div>
+            <div  style={{ height: 45 + "vh", paddingBottom: 20}}>
                 <div>
-                    <input is-medium type="email" placeholder="Email"></input>
+                    <input is-large is-success type="email" placeholder="Email"></input>
                 </div>
                 <div>
                 <input is-medium type="password" placeholder="Password"></input>
