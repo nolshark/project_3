@@ -26,6 +26,10 @@ const characterSchema = new Schema(
             required: false,
             maxlength: 120
         },
+        imageurl: {
+            type: String,
+            required: false
+        },
         wins: {
             type: Number,
             required: true,

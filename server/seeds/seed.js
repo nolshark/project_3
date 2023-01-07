@@ -1,6 +1,6 @@
 const connection = require('../config/connection.js');
 const { User, Character } = require('../models');
-const { getRandomUser, getRandomPost, getRandomCharacter, getRandomType, getRandomBrand, genRandomIndex } = require('./data.js');
+const { getRandomUser, getRandomPost, getRandomCharacter, getRandomType, getRandomBrand, getRandomImage, genRandomIndex } = require('./data.js');
 
 console.time('seeding');
 
@@ -22,11 +22,12 @@ connection.once('open', async () => {
         });
     }
 
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 2; i++) {
         let name = getRandomCharacter();
         let type = getRandomType();
         let brand = getRandomBrand();
         let description = getRandomPost(25);
+        let imageurl = getRandomImage();
         let wins = Math.floor(Math.random() * 1000);
         let losses = Math.floor(Math.random() * 1000);
 
@@ -35,6 +36,7 @@ connection.once('open', async () => {
             type,
             brand,
             description,
+            imageurl,
             wins,
             losses
         });
