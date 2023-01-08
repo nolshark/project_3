@@ -20,11 +20,13 @@ const Signup = () => {
                 </div>
                 <form id="signForm" class="column" style={{ border: "2px solid blue", }}>
                     <div class="field container has-text-centered">
-                        <h1 class="title">SignUp to Get in the Fight!</h1>
+                        <h1 class="title">Tournament Registration</h1>
                     </div>
                     <div class="field">
+
                         <label class="label">UserName</label>
                         <div class="control">
+
                             <input class="input is-medium" type="text" placeholder="PirateKing1"></input>
                         </div>
                     </div>
@@ -42,12 +44,12 @@ const Signup = () => {
                     </div>
                     <div class="field">
                         <div class="control">
-                            <button class="button">SignUp</button>
+                            <button class="button">Sign-Up</button>
                         </div>
                     </div>
                     <div class="field has-text-centered">
                         <div class="control">
-                            <p>Already a member? Please <a href="/login">LOGIN</a> to continue.</p>
+                            <p>Already signed up? <a href="/login">LOGIN</a> to enter the Arena.</p>
                         </div>
                     </div>
                 </form>
