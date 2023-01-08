@@ -13,7 +13,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Stats from './pages/Stats';
-import Header from './components/Header';
 import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
@@ -34,15 +33,14 @@ return {
 
 const client = new ApolloClient({
 // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
-link: authLink.concat(httpLink),
-cache: new InMemoryCache(),
+    link: authLink.concat(httpLink),
+    cache: new InMemoryCache(),
 });
 
 function App () {
     return(
         <ApolloProvider client={client}>
             <Router>
-                <Header />
                 <div>
                     <Routes>
                         <Route 

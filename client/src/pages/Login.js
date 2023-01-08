@@ -1,6 +1,6 @@
 import React from "react";
 
-import InputItem from "../components/InputItem";
+import FlashPanel from "../components/FlashPanel";
 
 const Login = () => {
 
@@ -12,12 +12,37 @@ const Login = () => {
     return (
         
         <main>
-            <div  style={{ height: 45 + "vh", paddingBottom: 20}}>
-                <div>
-                    <input is-large is-success type="email" placeholder="Email"></input>
+            <div id="loginMain" class="columns is-vcentered">
+                <div class="column" style={{ border: "2px solid black", }}>
+                    <FlashPanel />
                 </div>
-                <div>
-                <input is-medium type="password" placeholder="Password"></input>
+                <form id="signForm" class="column" style={{ border: "2px solid blue", }}>
+                    
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div>
+                            <input class="input is-medium" type="email" placeholder="example@eg.com"></input>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div>
+                            <input class="input is-medium" type="password" placeholder="8 - 32 Characters"></input>
+                        </div> 
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button">Login</button>
+                        </div>
+                    </div>
+                    <div class="field has-text-centered">
+                        <div class="control">
+                            <p>Recent to the Rumble? <a href="/signup">SIGNUP</a> to get started.</p>
+                        </div>
+                    </div>
+                </form>
+                <div class="column" style={{ border: "2px solid black", }}>
+                    <FlashPanel />
                 </div>
             </div>
         </main>
