@@ -1,17 +1,19 @@
 import React from "react";
-
+import Header from "../components/Header";
 
 
 const Home = () => {
 
     
     return (
-        
-        <main>
-            <div>
-                <h1 class="title">This is the HomePage</h1>
-            </div>
-        </main>
+        <div>
+            <Header />
+            <main>
+                <div>
+                    <h1 class="title">This is the HomePage</h1>
+                </div>
+            </main>
+        </div>
     );
 };
 

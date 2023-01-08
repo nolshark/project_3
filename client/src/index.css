@@ -3,3 +3,11 @@ body {
     min-height: 100%;
     background-color: rgb(255, 255, 255);
 }
+
+#signMain {
+    min-height: 75vh;
+}
+
+#loginMain {
+    min-height: 75vh;
+}

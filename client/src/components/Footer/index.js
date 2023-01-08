@@ -4,7 +4,9 @@ const Footer  = () => {
 
     return (
         <footer class="columns is-centered">
-            <h1>Brought to You by MatCh MoNo</h1>
+            <div>
+                <h1>Brought to You by MatCh MoNo</h1>
+            </div>
         </footer>
     );
 };
