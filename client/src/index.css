@@ -11,3 +11,7 @@ body {
 #loginMain {
     min-height: 75vh;
 }
+
+#mainContainer {
+    min-height: 80vh;
+}
