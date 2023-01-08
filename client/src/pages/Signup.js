@@ -23,20 +23,22 @@ const Signup = () => {
                         <h1 class="title">Tournament Registration</h1>
                     </div>
                     <div class="field">
-                        <label class="label">Username</label>
-                        <div>
+
+                        <label class="label">UserName</label>
+                        <div class="control">
+
                             <input class="input is-medium" type="text" placeholder="PirateKing1"></input>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Email</label>
-                        <div>
+                        <div class="control">
                             <input class="input is-medium" type="email" placeholder="example@eg.com"></input>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Password</label>
-                        <div>
+                        <div class="control">
                             <input class="input is-medium" type="password" placeholder="8 - 32 Characters"></input>
                         </div> 
                     </div>
