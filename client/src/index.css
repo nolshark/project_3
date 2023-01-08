@@ -4,6 +4,10 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+.footer {
+    padding: 1.5rem 1.5rem 1.5rem;
+}
+
 #signMain {
     min-height: 75vh;
 }
@@ -13,5 +17,5 @@ body {
 }
 
 #mainContainer {
-    min-height: 80vh;
+    min-height: 85vh;
 }
