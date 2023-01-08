@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             <Header />
             <main class="section columns" id="mainContainer" style={{paddingLeft: 0, paddingBottom: 10, }}>
-                <div class="column container is-one-fifth" style={{ backgroundColor: "lightgray", }}>
+                <div class="column container is-2" style={{ backgroundColor: "lightgray", }}>
                     <div class="column">
                         <button class="button is-large is-fullwidth">My Match-Ups</button>
                     </div>
