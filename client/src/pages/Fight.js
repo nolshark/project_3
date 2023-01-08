@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import CharCard from "../components/CharCard";
 
 
 
@@ -11,7 +12,7 @@ const Stats = () => {
             <Header />
             <main class="section columns" id="mainContainer">
                 <div class="column " style={{ maxWidth: "none", border: "2px solid black", }}>
-
+                    <CharCard />
                 </div>
                 <div class="column is-narrow" style={{ maxWidth: "none", border: "2px solid black", }}>
                     <div class="container has-text-centered">
@@ -27,7 +28,7 @@ const Stats = () => {
                     </div>
                 </div>
                 <div class="column " style={{ maxWidth: "none", border: "2px solid black", }}>
-                    
+                    <CharCard />
                 </div>
             </main>
         </div>
