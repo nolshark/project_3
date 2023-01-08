@@ -37,7 +37,7 @@ const Login = () => {
                     </div>
                     <div class="field has-text-centered">
                         <div class="control">
-                            <p>Recent to the Rumble? <a href="/signup">SIGNUP</a> to get started.</p>
+                            <p>New to the Fight? <a href="/signup">SIGNUP</a> to get started.</p>
                         </div>
                     </div>
                 </form>
