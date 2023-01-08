@@ -1,6 +1,6 @@
 const connection = require('../config/connection.js');
 const { User, Character } = require('../models');
-const { getRandomUser, getRandomPost, getRandomCharacter, getRandomType, getRandomBrand, getRandomImage, genRandomIndex } = require('./data.js');
+const { getRandomUser, getRandomPassword, getRandomPost, getRandomCharacter, getRandomType, getRandomBrand, getRandomImage, genRandomIndex } = require('./data.js');
 
 console.time('seeding');
 
@@ -15,10 +15,12 @@ connection.once('open', async () => {
     for (let i = 0; i < 1; i++) {
         let username = getRandomUser();
         let email = `${username}@Gmail.com`;
+        let password = getRandomPassword();
 
         users.push({
             username,
-            email
+            email,
+            password
         });
     }
 
