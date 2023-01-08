@@ -12,6 +12,20 @@ const testUser = [
     'KanyeSouth',
 ];
 
+const testPass = [
+    'ZgMCaf3kUa3gPgxj',
+    'YiZ8tUhdD8NwWUYD',
+    'eBo36qM6krtehKB2',
+    'LaKLCXi4zCkpqtku',
+    '8PHNjedNKzq4stfU',
+    'LwcGUoVJkoiETADb',
+    'xoQEvBzKP2XsMzwr',
+    'vk3neQdeYzcAU6GV',
+    'hcETWyRBJ8VdmCZF',
+    'RJnAGJWUmaKYXxPy',
+    'fqoVNRyvwGdv3r3j',
+]
+
 const lorum = [
     'lorem',
     'imsum',
@@ -86,6 +100,8 @@ const genRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
 
 const getRandomUser = () => `${testUser[genRandomIndex(testUser)]}`;
 
+const getRandomPassword = () => `${testPass[genRandomIndex(testPass)]}`;
+
 const getRandomWord = () => `${lorum[genRandomIndex(lorum)]}`;
 
 const getRandomPost = (words) => {
@@ -106,6 +122,7 @@ const getRandomImage = () => `${images[genRandomIndex(images)]}`;
 
 module.exports = {
     getRandomUser,
+    getRandomPassword,
     getRandomPost,
     getRandomCharacter,
     getRandomType,
