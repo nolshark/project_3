@@ -1,12 +1,5 @@
 import { gql } from '@apollo/client'; 
 
-export const QUERY_USERS = gql`
-    query allUsers{
-        _id
-        username
-    }
-`
-
 export const QUERY_CHARACTERS = gql`
     query allCharacters {
         characters{
@@ -19,3 +12,12 @@ export const QUERY_CHARACTERS = gql`
         }
     }
 `
+export const QUERY_ME = gql`
+query me {
+  me {
+    _id
+    username
+    email
+  }
+}
+`;
